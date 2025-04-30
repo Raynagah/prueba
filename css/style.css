@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    display: flex; /* Usamos Flexbox en el body */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+}
+.main{
+    font-size: 26px;
+}
+
+.contenedor{
+    border-radius: 2px;
+    border-color: black;
+    border-style: inset;
+    align-items: center;
+    width: 1200px;
+    height: 630px;
+    background-image: url(../img/Pantalla_inicio.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.boton{
+    border:0;
+    background-image: linear-gradient(
+        150deg,
+        rgb(255, 251, 1),
+        rgb(77, 0, 100),
+        #bd008e
+    );
+    margin-top: 550px;
+    margin-left: 545px;
+    border-radius: 8px;
+    color:#fff;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+
+}
+button:hover span {
+    background: none;
+}
+
+.PaginaEleccion{
+    border-radius: 2px;
+    border-color: black;
+    border-style: inset;
+    align-items: center;
+    width: 1200px;
+    height: 630px;
+    background-color: #bd008e;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
