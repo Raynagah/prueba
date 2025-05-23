@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EleccionRivalRvR</title>
+    <link rel="stylesheet" href="css/style_rival.css">
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+        </header>
+        <section class="contenido">
+            <div class="EleccionRivalRvR">
+
+                <h1 class="titulo-superior_rival">Aleatorio Vs Aleatorio (Rival)</h1>
+
+                <!-- Botón fijo en la esquina superior derecha -->
+                <button id="botonAbrirModal_rival" class="boton-modal_rival">Tipos de pokémon</button>
+
+                <!-- Modal -->
+                <div id="modalImagen_rival" class="modal_rival">
+                    <div class="modal-contenido_rival">
+                        <span class="cerrar_rival">&times;</span>
+                        <h2>Tipos Pokémon</h2>
+                        <img src="img/tipoPokemon/TiposPokemon.webp" alt="Imagen por defecto"
+                            class="imagen-completa_rival">
+                    </div>
+                </div>
+
+
+                <div class="CDatos1_rival">
+                    <div class="BloqueImg_rival">
+                        <img id="imgPokemon_rival" src="" alt="Imagen Pokémon" class="imagenPokemon_rival">
+                    </div>
+                    <div class="pokemon-info_rival" id="nombrePokemon_rival">Nombre: </div>
+                    <div class="pokemon-info_rival" id="numeroPokedex_rival">N. Pokédex: </div>
+                    <div class="pokemon-info_rival" id="tipoPokemon_rival">Naturaleza: </div>
+                </div>
+
+                <div class="CDatos2_rival">
+                    <button class="botonRandom_rival" onclick="buscarAleatorio_rival()">
+                        <span class="span">Buscar Random</span>
+                    </button>
+
+                    <div class="Titulomovs_rival">
+                        <label for="movimientos1">Elige un movimiento:</label>
+                    </div>
+
+                    <div class="selector-opciones_rival">
+                        <select id="movimientos1_rival" name="movimientos">
+                            <option value="ataque_rapido">Ataque Rápido</option>
+                            <option value="lanzallamas">Lanzallamas</option>
+                            <option value="rayo">Rayo</option>
+                            <option value="hidrobomba">Hidrobomba</option>
+                        </select>
+                        <div class="cuadro-color_rival" id="logotipo1"></div>
+                        <div class="rectangulo-info_rival"></div>
+                    </div>
+
+                    <div class="selector-opciones_rival">
+                        <select id="movimientos2_rival" name="movimientos">
+                            <option value="ataque_rapido">Ataque Rápido</option>
+                            <option value="lanzallamas">Lanzallamas</option>
+                            <option value="rayo">Rayo</option>
+                            <option value="hidrobomba">Hidrobomba</option>
+                        </select>
+                        <div class="cuadro-color_rival" id="logotipo2"></div>
+                        <div class="rectangulo-info_rival"></div>
+                    </div>
+
+                    <div class="selector-opciones_rival">
+                        <select id="movimientos3_rival" name="movimientos">
+                            <option value="ataque_rapido">Ataque Rápido</option>
+                            <option value="lanzallamas">Lanzallamas</option>
+                            <option value="rayo">Rayo</option>
+                            <option value="hidrobomba">Hidrobomba</option>
+                        </select>
+                        <div class="cuadro-color_rival" id="logotipo3"></div>
+                        <div class="rectangulo-info_rival"></div>
+                    </div>
+
+                    <div class="selector-opciones_rival">
+                        <select id="movimientos4_rival" name="movimientos">
+                            <option value="ataque_rapido">Ataque Rápido</option>
+                            <option value="lanzallamas">Lanzallamas</option>
+                            <option value="rayo">Rayo</option>
+                            <option value="hidrobomba">Hidrobomba</option>
+                        </select>
+                        <div class="cuadro-color_rival" id="logotipo4"></div>
+                        <div class="rectangulo-info_rival"></div>
+                    </div>
+                </div>
+
+                <div class="CDatos3_rival">
+                    <button class="botonSPokemon_rival" onclick="window.location.href='EleccionRivalRvR.html'">
+                        <span class="span">Seleccionar Pokémon</span>
+                    </button>
+                    <button class="botonSPVolver_rival" onclick="window.location.href='PaginaEleccion.html'">
+                        <span class="span">Volver al menú</span>
+                    </button>
+                </div>
+
+                <script src="js/app_rival.js"></script>
+                <script src="js/emergentes_rival.js"></script>

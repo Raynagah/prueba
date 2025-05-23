@@ -1,0 +1,170 @@
+/* 1. Centrar y contener con max-width y % */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* centrado horizontal */
+    align-items: center;     /* centrado vertical */
+    padding: 10px; /* un poco de espacio en pantallas pequeñas */
+    box-sizing: border-box;
+}
+
+/* 2. Contenedor principal flexible y responsive */
+.PEJugadorR {
+    position: relative;
+    border-radius: 2px;
+    border: inset 2px black;
+    width: 90vw;          /* ocupa 90% del ancho de la ventana */
+    max-width: 1200px;    /* pero no más de 1200px */
+    aspect-ratio: 1200 / 630; /* mantiene proporción 1200x630 */
+    background-image: url(../img/fondoDuelo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw; /* espacio entre elementos */
+    padding: 1rem;
+}
+
+/* 3. Zona inferior de botones: fijo abajo dentro del contenedor */
+.zona-ataques {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%; /* proporcional al contenedor */
+    background-color: #e0e0e0;
+    border-top: 3px solid black;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 4. Botones de ataque: tamaño flexible */
+.boton-ataque, .boton-terminar {
+    flex: 1 1 150px; /* crecen, pero mínimo 150px */
+    max-width: 180px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.boton-ataque {
+    background-color: #666;
+}
+.boton-ataque:hover {
+    background-color: #555;
+}
+.boton-terminar {
+    background-color: red;
+}
+
+/* 5. Info Pokémon: posiciones relativas dentro del flex contenedor */
+.info-pokemon {
+    position: relative; /* evitar absolute para más flexibilidad */
+    min-width: 140px;
+    max-width: 180px;
+    padding: 10px;
+    background-color: rgba(255, 255, 150, 0.8);
+    border: 2px solid black;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    flex-shrink: 0;
+}
+
+/* Colores para jugador y rival */
+.info-rival {
+    background-color: rgba(150, 255, 150, 0.8);
+}
+
+/* 6. Sprites Pokémon: tamaño flexible, no absolute */
+.sprite-pokemon {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+   
+}
+
+/* Clases específicas para orden y margen */
+.sprite-jugador {
+    order: 1;
+}
+
+.info-jugador {
+    order: 2;
+}
+
+.sprite-rival {
+    order: 3;
+}
+
+.info-rival {
+    order: 4;
+}
+
+/* 7. Media queries para móviles */
+@media (max-width: 700px) {
+    .PEJugadorR {
+        flex-direction: column;
+        width: 95vw;
+        height: auto;
+        aspect-ratio: auto;
+    }
+
+    .zona-ataques {
+        position: relative;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .boton-ataque, .boton-terminar {
+        max-width: 100%;
+        flex: 1 1 auto;
+        margin-bottom: 10px;
+    }
+
+    .sprite-pokemon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .info-pokemon {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* 8. Posicionar sprites en esquinas */
+.jugador-bloque {
+    position: absolute;
+    bottom: 35%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rival-bloque {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

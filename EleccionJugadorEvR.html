@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elección por Búsqueda</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="main">
+        <header class="header"></header>
+        <section class="contenido">
+            <div class="EleccionJugadorEvR">
+                <h1 class="titulo-superior">Elección Vs Aleatorio (Jugador)</h1>
+                <button id="botonAbrirModal" class="boton-modal">Tipos de pokémon</button>
+                <div id="modalImagen" class="modal">
+                    <div class="modal-contenido">
+                        <span class="cerrar">&times;</span>
+                        <h2>Tipos Pokémon</h2>
+                        <img src="img/tipoPokemon/TiposPokemon.webp" alt="Tipos Pokémon" class="imagen-completa">
+                    </div>
+                </div>
+                <div class="CDatos1">
+                    <div class="BloqueImg">
+                        <img id="imgPokemon" src="" alt="Imagen Pokémon" class="imagenPokemon">
+                    </div>
+                    <div class="pokemon-info" id="nombrePokemon">Nombre: </div>
+                    <div class="pokemon-info" id="numeroPokedex">N. Pokédex: </div>
+                    <div class="pokemon-info" id="tipoPokemon">Tipo: </div>
+                </div>
+                <div class="CDatos2">
+                    <!-- Buscador -->
+                    <input type="text" id="inputBusqueda" placeholder="Nombre o N° Pokédex" />
+                    <button class="botonBuscar" onclick="buscarPorNombreONumero()">
+                        <span class="span">Buscar Pokémon</span>
+                    </button>
+
+                    <div class="Titulomovs">
+                        <label for="movimientos1">Elige un movimiento:</label>
+                    </div>
+                    <div class="selector-opciones">
+                        <select id="movimientos1"></select>
+                        <div class="cuadro-color" id="logotipo1"></div>
+                        <div class="rectangulo-info"></div>
+                    </div>
+                    <div class="selector-opciones">
+                        <select id="movimientos2"></select>
+                        <div class="cuadro-color" id="logotipo2"></div>
+                        <div class="rectangulo-info"></div>
+                    </div>
+                    <div class="selector-opciones">
+                        <select id="movimientos3"></select>
+                        <div class="cuadro-color" id="logotipo3"></div>
+                        <div class="rectangulo-info"></div>
+                    </div>
+                    <div class="selector-opciones">
+                        <select id="movimientos4"></select>
+                        <div class="cuadro-color" id="logotipo4"></div>
+                        <div class="rectangulo-info"></div>
+                    </div>
+                </div>
+                <div class="CDatos3">
+                    <button class="botonSPokemon" onclick="window.location.href='EleccionRivalEvR.html'">
+                        <span class="span">Seleccionar Pokémon</span>
+                    </button>
+                    <button class="botonSPVolver" onclick="window.location.href='PaginaEleccion.html'">
+                        <span class="span">Volver al menú</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+    <script src="js/emergentes.js"></script>
+</body>
+
+</html>

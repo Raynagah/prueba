@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.titulo-superior_rival {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px #000;
+    z-index: 50;
+}
+
+
+
+
+
+body, html {
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    display: flex; /* Usamos Flexbox en el body */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+}
+.main{
+    font-size: 26px;
+    flex-direction: row;
+    display: flex; 
+}
+
+.EleccionRivalEvE{
+    position: relative; /* AÑADIR ESTO */
+    border-radius: 2px;
+    border-color: black;
+    border-style: inset;
+    align-items: center;
+    width: 1200px;
+    height: 630px;
+    background-image: url(../img/PERivalAUX.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: row; 
+    display: flex;
+}
+
+.EleccionRivalRvR{
+    position: relative; /* AÑADIR ESTO */
+    border-radius: 2px;
+    border-color: black;
+    border-style: inset;
+    align-items: center;
+    width: 1200px;
+    height: 630px;
+    background-image: url(../img/PERivalAUX.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: row; 
+    display: flex;
+}
+
+
+.EleccionRivalEvR{
+    position: relative; /* AÑADIR ESTO */
+    border-radius: 2px;
+    border-color: black;
+    border-style: inset;
+    align-items: center;
+    width: 1200px;
+    height: 630px;
+    background-image: url(../img/PERivalAUX.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: row; 
+    display: flex;
+}
+/* Contenedores generales */
+.CDatos1_rival, .CDatos2_rival {
+  width: 290px;
+  height: 420px;
+  background-color: rgba(1, 55, 83, 0.6); /* azul petróleo translúcido */
+  border: 2px solid #023442;
+  margin-left: 80px;
+  margin-top: 135px;
+}
+
+/* Información de Pokémon */
+.pokemon-info_rival {
+  color: #aee9e9; /* verde agua claro */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 17%;
+  margin-left: 15%;
+  background-color: rgba(2, 20, 55, 0.8);
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  border: 2px solid #01475a;
+}
+
+/* Imagen */
+.BloqueImg_rival {
+  width: 110px;
+  height: 110px;
+  margin-left: 32%;
+  margin-top: 10%;
+  background-color: #00263b;
+  opacity: 1;
+  border: 2px solid #01475a;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+
+.imagenPokemon_rival {
+  width: 100px;
+  height: 100px;
+  max-width: none;
+  max-height: none;
+  display: block;
+}
+
+/* Título de movimientos */
+.Titulomovs_rival {
+  color: #aee9e9;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 5%;
+  margin-left: 15%;
+  background-color: rgba(2, 20, 55, 0.8);
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  border: 2px solid #01475a;
+}
+
+/* Selector de opciones */
+.selector-opciones_rival {
+  margin-top: 7%;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+}
+
+.selector-opciones_rival select {
+  width: 150px;
+  height: 100%;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 2px solid #02566b;
+  background-color: #013753;
+  color: #e0f7f7;
+  text-align: center;
+}
+
+.selector-opciones_rival select:focus {
+  border-color: #47eeda;
+  background-color: #015d81;
+}
+
+/* Cuadro de color y rectángulo */
+.cuadro-color_rival {
+  width: 42px;
+  height: 42px;
+  background-color: #ccc;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background-size: cover;
+}
+
+.rectangulo-info_rival {
+  width: 65px;
+  height: 42px;
+  background-color: #eee;
+  border: 2px solid #333;
+  border-radius: 4px;
+  margin-right: 5%;
+}
+
+/* Panel adicional */
+.CDatos3_rival {
+  width: 290px;
+  height: 420px;
+  margin-left: 80px;
+  margin-top: 135px;
+}
+
+/* Botón principal */
+.botonMain_rival {
+  position: absolute;
+  border: 0;
+  background-image: linear-gradient(150deg, #47eeda, #1b3c5a);
+  margin-left: 40%;
+  margin-top: 40%;
+  color: #fff;
+  display: flex;
+  font-size: 18px;
+  padding: 4px;
+  cursor: pointer;
+  transition: .3s;
+  z-index: 10;
+}
+
+button span {
+  background-color: #111;
+  padding: 16px 24px;
+  border-radius: 6px;
+  transition: .3s;
+}
+button:hover span {
+  background: none;
+}
+
+/* Botón Seleccionar Pokémon */
+.botonSPokemon_rival {
+  border: 0;
+  background-image: linear-gradient(150deg, #1b3c5a, #013753);
+  margin-left: 10%;
+  margin-top: 90%;
+  color: #fff;
+  display: flex;
+  font-size: 16px;
+  padding: 4px;
+  cursor: pointer;
+  transition: .3s;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+/* Botón Volver */
+.botonSPVolver_rival {
+  border: 0;
+  background-image: linear-gradient(150deg, #00263b, #001421);
+  margin-left: 18%;
+  margin-top: 5%;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  padding: 3px;
+  cursor: pointer;
+  transition: .3s;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+/* Botón Random: más llamativo */
+.botonRandom_rival {
+  border: 0;
+  background-image: linear-gradient(150deg, #47eeda, #1b3c5a);
+  margin-left: 21%;
+  margin-top: 10%;
+  color: #fff;
+  display: flex;
+  font-size: 18px;
+  padding: 3px;
+  cursor: pointer;
+  transition: .3s;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+/* Botón modal */
+.boton-modal_rival {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* Modal */
+.modal_rival {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-contenido_rival {
+  position: relative;
+  margin: 2% auto;
+  width: fit-content;
+  max-width: 90%;
+  max-height: 90%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.cerrar_rival {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.imagen-completa_rival {
+  align-items: center;
+  width: 100%;
+  height: auto;
+  max-width: 90%;
+  max-height: 100%;
+  display: block;
+}
+
+/* Input de búsqueda */
+#inputBusqueda_rival {
+  width: 70%;
+  padding: 10px 12px;
+  margin: 10px auto 0;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  outline: none;
+  display: block;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón Buscar */
+.botonBuscar_rival {
+  border: 0;
+  background-image: linear-gradient(120deg, #47eeda, #1b3c5a);
+  margin: 10px auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  padding: 4px 6px;
+  border-radius: 10px;
+  width: fit-content;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+/* Hover general para todos los botones */
+button:hover {
+  filter: brightness(1.1);
+}

@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height:100%; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.main{
+    font-size: 26px;
+    
+}
+
+.logo {
+    max-width: 17.5%;  
+    height: auto;      
+    margin: 2%;      
+    display: block;    
+    margin-left: 2%;
+    margin-right: auto; 
+    border: #00ddff;
+    border-radius: 10px;
+}
+
+.contenedor{
+    border-radius: 2px;
+    border-color: black;
+    border-style: inset;
+    align-items: center;
+    width: 1200px;
+    height: 630px;
+    background-image:url("../img/Articuno_Fondo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.boton{
+    border:0;
+    background-image: linear-gradient(
+        150deg,
+        rgb(1, 251, 255),
+        rgb(255, 255, 255),
+        #00ddff
+    );
+    margin-top: 15%;
+    margin-left: 12%;
+    border-radius: 8px;
+    color:#fff;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+.botonesEleccion {
+    
+    display: flex;
+    height: auto;
+    flex-direction: row; 
+    gap: 5%; 
+    align-items:center;
+    margin-top: 2%; 
+    border-radius: 8px;
+    font-size: 16px;
+    margin-right: 150px;
+}
+
+.botonVolver{
+    border:0;
+    background-image: linear-gradient(
+        150deg,
+        rgb(84, 151, 152),
+        rgb(191, 128, 225),
+        #1bb479
+    );
+    margin-top: 20%;
+    margin-left: 68%;
+    border-radius: 8px;
+    color:#fff;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+    justify-content: flex-end; 
+    margin-top: 50px;
+}
+
+button span{
+    background-color: #1da7bf;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+
+}
+button:hover span {
+    background: none;
+    color:black;
+}
+
+.botonVolver span {
+    background-color: #031ba0;
+    color: rgb(255, 255, 255);
+}
+
+.volver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+/*
+.imagenesMini {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.imagenesMini img {
+    width: 160px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+.imagenesMini img:hover {
+    transform: scale(1.5);
+}
+
+.imagenesMini2 {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.imagenesMini2 img {
+    width: 160px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+.imagenesMini2 img:hover {
+    transform: scale(1.5);
+}
+
+.imagenesMini3 {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.imagenesMini3 img {
+    width: 160px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+.imagenesMini3 img:hover {
+    transform: scale(1.5);
+}
+Quiero agregar imágenes para que no se vea tan vacía la ventana pero no me ha resultado jajaja
+*/
+
+/*Para pantallas pequeñas podemos dejar esta media query */
+@media (max-width: 600px) {
+    .logo {
+        max-width: 50%;
+    }
+    .botonesEleccion{
+       flex-direction: column;
+       gap:10px;
+    }
+}

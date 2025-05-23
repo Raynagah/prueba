@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EleccionJugador</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="main">
+    <header class="header">
+    </header>
+    <section class="contenido">
+        <div class="EleccionJugadorRvR">
+            <h1 class="titulo-superior">Aleatorio Vs Aleatorio (Jugador)</h1>
+
+            <button id="botonAbrirModal" class="boton-modal">Tipos de pokémon</button>
+
+            <div id="modalImagen" class="modal">
+                <div class="modal-contenido">
+                    <span class="cerrar">&times;</span>
+                    <h2>Tipos Pokémon</h2>
+                    <img src="img/tipoPokemon/TiposPokemon.webp" alt="Imagen por defecto" class="imagen-completa">
+                </div>
+            </div>
+
+            <div class="CDatos1">
+                <div class="BloqueImg">
+                    <img id="imgPokemon" src="" alt="Imagen Pokémon" class="imagenPokemon">
+                </div>
+                <div class="pokemon-info" id="nombrePokemon">Nombre: </div>
+                <div class="pokemon-info" id="numeroPokedex">N. Pokédex: </div>
+                <div class="pokemon-info" id="tipoPokemon">Naturaleza: </div>
+            </div>
+
+            <div class="CDatos2">
+                <button class="botonRandom" onclick="buscarAleatorio()">
+                    <span class="span">Buscar Random</span>
+                </button>
+
+                <div class="Titulomovs">
+                    <label for="movimientos1">Elige un movimiento:</label>
+                </div>
+
+                <div class="selector-opciones">
+                    <select id="movimientos1" name="movimientos">
+                        <option value="ataque_rapido">Ataque Rápido</option>
+                        <option value="lanzallamas">Lanzallamas</option>
+                        <option value="rayo">Rayo</option>
+                        <option value="hidrobomba">Hidrobomba</option>
+                    </select>
+                    <div class="cuadro-color" id="logotipo1"></div>
+                    <div class="rectangulo-info"></div>
+                </div>
+
+                <div class="selector-opciones">
+                    <select id="movimientos2" name="movimientos">
+                        <option value="ataque_rapido">Ataque Rápido</option>
+                        <option value="lanzallamas">Lanzallamas</option>
+                        <option value="rayo">Rayo</option>
+                        <option value="hidrobomba">Hidrobomba</option>
+                    </select>
+                    <div class="cuadro-color" id="logotipo2"></div>
+                    <div class="rectangulo-info"></div>
+                </div>
+
+                <div class="selector-opciones">
+                    <select id="movimientos3" name="movimientos">
+                        <option value="ataque_rapido">Ataque Rápido</option>
+                        <option value="lanzallamas">Lanzallamas</option>
+                        <option value="rayo">Rayo</option>
+                        <option value="hidrobomba">Hidrobomba</option>
+                    </select>
+                    <div class="cuadro-color" id="logotipo3"></div>
+                    <div class="rectangulo-info"></div>
+                </div>
+
+                <div class="selector-opciones">
+                    <select id="movimientos4" name="movimientos">
+                        <option value="ataque_rapido">Ataque Rápido</option>
+                        <option value="lanzallamas">Lanzallamas</option>
+                        <option value="rayo">Rayo</option>
+                        <option value="hidrobomba">Hidrobomba</option>
+                    </select>
+                    <div class="cuadro-color" id="logotipo4"></div>
+                    <div class="rectangulo-info"></div>
+                </div>
+            </div>
+
+            <div class="CDatos3">
+                <button class="botonSPokemon" onclick="guardarPokemon()">
+                    <span class="span">Seleccionar Pokémon</span>
+                </button>
+                <button class="botonSPVolver" onclick="window.location.href='PaginaEleccion.html'">
+                    <span class="span">Volver al menú</span>
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="js/app.js"></script>
+<script src="js/emergentes.js"></script>
+
+<!-- Script para guardar Pokémon -->
+<script>
+function guardarPokemon() {
+    const nombre = document.getElementById('nombrePokemon').innerText.replace('Nombre: ', '').trim();
+    const numero = document.getElementById('numeroPokedex').innerText.replace('N. Pokédex: ', '').trim();
+    const tipo = document.getElementById('tipoPokemon').innerText.replace('Naturaleza: ', '').trim();
+
+    const movimientos = [
+        document.getElementById('movimientos1').value,
+        document.getElementById('movimientos2').value,
+        document.getElementById('movimientos3').value,
+        document.getElementById('movimientos4').value
+    ];
+
+    if (!nombre || !numero || !tipo) {
+        alert("Faltan datos del Pokémon. Asegúrate de haber buscado uno aleatorio.");
+        return;
+    }
+
+    const datos = {
+        nombre: nombre,
+        numero_pokedex: numero,
+        tipo: tipo,
+        movimientos: movimientos
+    };
+
+    fetch('http://localhost/PokeTactics/guardar_pokemon.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(datos)
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log('Respuesta del servidor:', data);
+        // Redirige si se guarda correctamente
+        window.location.href = 'EleccionRivalRvR.html';
+    })
+    .catch(error => {
+        console.error('Error al guardar el Pokémon:', error);
+    });
+}
+</script>
+
+</body>
+</html>

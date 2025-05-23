@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EleccionRivalRvR</title>
+    <link rel="stylesheet" href="css/style_rival.css">
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+        </header>
+        <section class="contenido">
+            <div class="EleccionRivalEvE">
+
+                <h1 class="titulo-superior_rival">Elección Vs Elección (Rival)</h1>
+
+                <button id="botonAbrirModal_rival" class="boton-modal_rival">Tipos de pokémon</button>
+
+                <div id="modalImagen_rival" class="modal_rival">
+                    <div class="modal-contenido_rival">
+                        <span class="cerrar_rival">&times;</span>
+                        <h2>Tipos Pokémon</h2>
+                        <img src="img/tipoPokemon/TiposPokemon.webp" alt="Tipos Pokémon" class="imagen-completa_rival">
+                    </div>
+                </div>
+
+                <div class="CDatos1_rival">
+                    <div class="BloqueImg_rival">
+                        <img id="imgPokemon_rival" src="" alt="Imagen Pokémon" class="imagenPokemon_rival">
+                    </div>
+                    <div class="pokemon-info_rival" id="nombrePokemon_rival">Nombre: </div>
+                    <div class="pokemon-info_rival" id="numeroPokedex_rival">N. Pokédex: </div>
+                    <div class="pokemon-info_rival" id="tipoPokemon_rival">Tipo: </div>
+                </div>
+
+                <div class="CDatos2_rival">
+                    <!-- Buscador -->
+                    <input type="text" id="inputBusqueda_rival" placeholder="Nombre o N° Pokédex" />
+                    <button class="botonBuscar_rival" onclick="buscarPorNombreONumero_rival()">
+                        <span class="span">Buscar Pokémon</span>
+                    </button>
+
+                    <div class="Titulomovs_rival">
+                        <label for="movimientos1_rival">Elige un movimiento:</label>
+                    </div>
+
+                    <div class="selector-opciones_rival">
+                        <select id="movimientos1_rival"></select>
+                        <div class="cuadro-color_rival" id="logotipo1_rival"></div>
+                        <div class="rectangulo-info_rival"></div>
+                    </div>
+
+                    <div class="selector-opciones_rival">
+                        <select id="movimientos2_rival"></select>
+                        <div class="cuadro-color_rival" id="logotipo2_rival"></div>
+                        <div class="rectangulo-info_rival"></div>
+                    </div>
+
+                    <div class="selector-opciones_rival">
+                        <select id="movimientos3_rival"></select>
+                        <div class="cuadro-color_rival" id="logotipo3_rival"></div>
+                        <div class="rectangulo-info_rival"></div>
+                    </div>
+
+                    <div class="selector-opciones_rival">
+                        <select id="movimientos4_rival"></select>
+                        <div class="cuadro-color_rival" id="logotipo4_rival"></div>
+                        <div class="rectangulo-info_rival"></div>
+                    </div>
+                </div>
+
+                <div class="CDatos3_rival">
+                    <button class="botonSPokemon_rival" onclick="window.location.href='EleccionRivalRvR.html'">
+                        <span class="span">Seleccionar Pokémon</span>
+                    </button>
+                    <button class="botonSPVolver_rival" onclick="window.location.href='PaginaEleccion.html'">
+                        <span class="span">Volver al menú</span>
+                    </button>
+                </div>
+        </section>
+    </main>
+    <script src="js/app_rival.js"></script>
+    <script src="js/emergentes_rival.js"></script>
+</body>
+
+</html>
